@@ -1,0 +1,32 @@
+Starting GAN training for 2 epochs...
+Epoch 0/2 starting...
+Epoch 0/2 | D loss: 0.5281 (Acc: 85.16%) | G loss: 0.6751
+--- Samples at epoch 0 (Real mean ~5.00) ---
+Sample 1: -0.7520
+Sample 2: -0.1273
+Sample 3: 0.5958
+Sample 4: -0.0870
+Sample 5: -0.0291
+------------------------------------
+Epoch 1/2 starting...
+Epoch 1/2 | D loss: 0.5662 (Acc: 76.04%) | G loss: 0.6757
+--- Samples at epoch 1 (Real mean ~5.00) ---
+Sample 1: -0.1390
+Sample 2: -0.1681
+Sample 3: -0.0852
+Sample 4: 0.0228
+Sample 5: 0.1944
+------------------------------------
+GAN Training Finished.
+
+--- Generating final samples after training ---
+Final Sample 1: -0.4168
+Final Sample 2: 0.8721
+Final Sample 3: 0.2642
+Final Sample 4: -0.7134
+Final Sample 5: 0.1375
+Final Sample 6: -0.4290
+Final Sample 7: 0.0757
+Final Sample 8: 0.0525
+Final Sample 9: -0.1893
+Final Sample 10: -0.7278
