@@ -1,6 +1,6 @@
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Embedding, LSTM, Dense
+from tensorflow.keras.layers import Embedding, LSTM, Dense, Dropout
 from tensorflow.keras.callbacks import ModelCheckpoint, ReduceLROnPlateau
 import numpy as np
 import os
@@ -8,7 +8,7 @@ import re
 
 # --- Parameters ---
 SEQ_LENGTH = 50 # Length of input sequences
-EPOCHS = 50 # Number of epochs to train for
+EPOCHS = 150 # Number of epochs to train for
 BATCH_SIZE = 128
 LSTM_UNITS = 128 # Number of units in the LSTM layer
 EMBEDDING_DIM = 64 # Dimension of the character embedding
@@ -68,12 +68,25 @@ def prepare_training_data(text, char_to_int, seq_length, vocab_size):
     return X, y, n_patterns
 
 # --- 4. Define Model ---
-def build_model(seq_length, vocab_size, embedding_dim=EMBEDDING_DIM, lstm_units=LSTM_UNITS):
+def build_model(seq_length, vocab_size, embedding_dim=EMBEDDING_DIM, lstm_units_param=LSTM_UNITS):
+    # lstm_units_param from function signature can be overridden if needed,
+    # but here we'll use a fixed value of 256 for the layers as per modification request.
+    model_lstm_units = 256 
+
     model = Sequential([
         # Embedding layer maps each character index to a dense vector of embedding_dim dimensions.
         # Input to Embedding is (batch_size, seq_length)
         Embedding(input_dim=vocab_size, output_dim=embedding_dim, input_length=seq_length),
-        LSTM(lstm_units), # LSTM expects 3D input (batch_size, timesteps, features)
+        
+        # First LSTM layer
+        LSTM(model_lstm_units, return_sequences=True), # return_sequences=True because the next layer is another LSTM
+        Dropout(0.2), # Dropout for regularization
+        
+        # Second LSTM layer
+        LSTM(model_lstm_units), # No return_sequences=True as this is the last LSTM layer before Dense
+        Dropout(0.2), # Dropout for regularization
+        
+        # Output layer
         Dense(vocab_size, activation='softmax')
     ])
     
