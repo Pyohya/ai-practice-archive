@@ -110,6 +110,7 @@ GAN의 학습은 다음 두 단계를 번갈아 수행합니다:
 GAN의 전체적인 데이터 흐름은 다음과 같이 표현할 수 있습니다:
 
 ![diagram](./diagram-gan.png)
+![result](./scripts/gan_example/gan_generated_data_distribution.png)
 
 **`gan_generated_data_distribution.png` 파일 설명:**
 
