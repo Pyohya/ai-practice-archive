@@ -15,8 +15,7 @@ notes/      # 논문·강의 정리 Markdown
 
 ### `scripts` 폴더 예제
 
-난이도별로 둘러보기 쉽게 정리했습니다. 기초 학습용부터 조금 더 복잡한 프로젝트까지 단계적으로 살펴보세요.
-
+=======
 #### 초급 예제
 
 - `logistic_regression_example` - 로지스틱 회귀
@@ -43,6 +42,7 @@ notes/      # 논문·강의 정리 Markdown
 
 - `mlp_example` - 순수 파이썬 MLP 역전파 구현
 - `pso_example` - 입자 군집 최적화(PSO)
+=======
 
 ---
 
