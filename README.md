@@ -21,6 +21,11 @@ notes/      # 논문·강의 정리 Markdown
 - `logistic_regression_example` - 로지스틱 회귀
 - `kmeans_example` - K-means 클러스터링
 - `q_learning_example` - Q-learning 그리드월드
+- `decision_tree_example` - 결정 트리 분류
+- `naive_bayes_example` - 나이브 베이즈 텍스트 분류
+- `genetic_algorithm_example` - 간단한 유전 알고리즘
+- `sarsa_example` - SARSA 강화학습
+- `matrix_factorization_example` - 행렬 분해 추천
 
 ---
 
