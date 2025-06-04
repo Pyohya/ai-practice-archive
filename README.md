@@ -13,6 +13,15 @@ scripts/    # 실험·유틸 스크립트
 notes/      # 논문·강의 정리 Markdown
 ```
 
+### `scripts` 폴더 예제
+
+- `gan_example` - 1차원 GAN 구현
+- `knn_example` - k-최근접 이웃 분류
+- `text_generation_example` - 문자 단위 LSTM 생성기
+- `logistic_regression_example` - 로지스틱 회귀
+- `kmeans_example` - K-means 클러스터링
+- `q_learning_example` - Q-learning 그리드월드
+
 ---
 
 ## 이렇게 활용해 보세요
