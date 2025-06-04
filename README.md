@@ -15,6 +15,28 @@ notes/      # 논문·강의 정리 Markdown
 
 ### `scripts` 폴더 예제
 
+#### 초급 예제
+
+- `logistic_regression_example` - 로지스틱 회귀
+- `kmeans_example` - K-means 클러스터링
+- `decision_tree_example` - 결정 트리 분류
+- `naive_bayes_example` - 나이브 베이즈 텍스트 분류
+- `knn_example` - k-최근접 이웃 분류
+
+#### 중급 예제
+
+- `gan_example` - 1차원 GAN 구현
+- `text_generation_example` - 문자 단위 LSTM 생성기
+- `q_learning_example` - Q-learning 그리드월드
+- `sarsa_example` - SARSA 강화학습
+- `genetic_algorithm_example` - 간단한 유전 알고리즘
+- `matrix_factorization_example` - 행렬 분해 추천
+- `pagerank_example` - PageRank 계산
+- `apriori_example` - Apriori 연관 규칙 학습
+- `mcts_example` - 틱택토 MCTS
+- `simulated_annealing_example` - TSP 시뮬레이티드 어닐링
+- `pca_example` - 2차원 PCA
+=======
 - `gan_example` - 1차원 GAN 구현
 - `knn_example` - k-최근접 이웃 분류
 - `text_generation_example` - 문자 단위 LSTM 생성기
